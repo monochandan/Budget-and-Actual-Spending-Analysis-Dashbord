@@ -88,14 +88,70 @@ Create date master table
 Delete column named Source.Name from Actuals table.
 
 Change the category of Country column from Forecast Table: for easily mapping
-	Column Tool -> Data Category -> Choose country
+	
+ 	Column Tool -> Data Category -> Choose country
 
 Change the category of Country column from Budget Table: for easily mapping
-	Column Tool -> Data Category -> Choose country
+	
+  	Column Tool -> Data Category -> Choose country
 
 
 Delete unnecessary columns from Dim Tables
 
+# 3. Building Relationships:
 
+Create table called calendar : 
+
+	calender = CALENDARAUTO() --> will create column name date
+
+	column tools -> Format -> Short Date
+
+Connect Forecast to Depaertments:
+
+ 	Select IT Dep. column from forecast table and put on top of the Departments IT Department column.
+
+
+Connect Budget to Depaertments:
+
+ 	Select IT Dep. column from Budget table and put on top of the Departments IT Department column.
+
+
+
+Connect Actuals to Depaertments:
+
+	 Select IT Dep. column from Actuals table and put on top of the Departments IT Department column.
+
+
+Connect Calnedar to Budget, Actuals, Forecast:
+
+	select date column from newly created Calender table and put on top of the date columns of the following tables Budget, Actuals, Forecast.
+
+ # 4. Visualizations:
+
+### 1. Creating slicer for date selection
+### 2. KPI Card : 
+		TotalBudget = SUM(Budget[Budget]) --> totalbudget measure
+		TotalActual = SUM(Actuals[Actual]) --> total actual measure
+		Variance = [TotalActuals] - [TotalBudget] --> overall variance measure
+		TotalForecast = SUM(Forecast[Forecast]) --> Forcast Accuracy measure
+		ForecastAccuracy = 1 - (ABS([TotalActuals] - [TotalForecast]) / [TotalActuals]) --> Forcast accuracy calculation
+
+
+### 3. For comparing Total Actual and Total Budget in clustered bar chart,  create aseperate table using DAX
+
+   			  CombineActualBudget = UNION(
+                             SELECTCOLUMNS(
+                                Budget,
+                                "Department", Budget[IT Dep.],
+                                "Type", "Budget",
+                                "Amount", Budget[Budget]
+                                ),
+                                SELECTCOLUMNS(
+                                    Actuals,
+                                    "Department", Actuals[IT Department],
+                                    "Type", "Actual",
+                                    "Amount", Actuals[Actual]
+                                )
+                                )
  
 
