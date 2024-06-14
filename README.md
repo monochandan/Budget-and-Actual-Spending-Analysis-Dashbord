@@ -71,13 +71,13 @@ Dim_Region:
 
 # 1. Load and Connect the table in format of text/csv:
 
- 1.1: Also connect the folder in power BI then combine the tablesa nd load them as one. everything wiil be ordered in cronological order for us 
+ ### 1.1: Also connect the folder in power BI then combine the tablesa nd load them as one. everything wiil be ordered in cronological order for us 
 
 
 
 #  2. Cleaning the data:
 
- 2.1 Enables View -> Column Quality to see the valid, error and empty values for each column.
+ ### 2.1 Enables View -> Column Quality to see the valid, error and empty values for each column.
 
 
 Before visualization:
