@@ -154,4 +154,12 @@ Connect Calnedar to Budget, Actuals, Forecast:
                                 )
                                 )
  
+# Page 1
+<img width="722" alt="image" src="https://github.com/monochandan/Budget-and-Actual-Spending-Analysis-Dashbord/assets/29684226/2d41bf58-fb3a-4886-b02c-9d92793dd3f9">
+
+# Page 2
+<img width="722" alt="image" src="https://github.com/monochandan/Budget-and-Actual-Spending-Analysis-Dashbord/assets/29684226/1ec3f627-3440-4b30-b3b0-f27e0584f258">
+
+# Page 3
+<img width="719" alt="image" src="https://github.com/monochandan/Budget-and-Actual-Spending-Analysis-Dashbord/assets/29684226/13f7f0a2-f4ff-4342-970b-47f0aec64a50">
 
